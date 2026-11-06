@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #f4f7fc;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #14213d;
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h2 {
+            color: #00d4ff;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #00d4ff;
+        }
+
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #14213d, #2455a4);
+            color: white;
+        }
+
+        .hero-content {
+            animation: fadeIn 1.5s ease;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #00d4ff;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .hero h1 span {
+            color: #00d4ff;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 25px;
+            margin: 5px;
+            background-color: #00d4ff;
+            color: #14213d;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background-color: white;
+            transform: translateY(-4px);
+        }
+
+        section {
+            padding: 65px 8%;
+            scroll-margin-top: 85px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 30px;
+            color: #14213d;
+            margin-bottom: 35px;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 70px;
+            height: 4px;
+            background-color: #00a8cc;
+            margin: 10px auto;
+            border-radius: 5px;
+        }
+
+        .about {
+            background-color: white;
+            text-align: center;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: auto;
+            font-size: 17px;
+        }
+
+        .education,
+        .hobbies,
+        .achievements {
+            background-color: #f4f7fc;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h3 {
+            color: #2455a4;
+            margin-bottom: 10px;
+        }
+
+        .skills,
+        .projects,
+        .contact {
+            background-color: white;
+        }
+
+        .skill-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill {
+            background-color: #e1f7ff;
+            color: #14213d;
+            padding: 12px 25px;
+            border-radius: 25px;
+            border: 1px solid #00bde8;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            background-color: #14213d;
+            color: white;
+            transform: scale(1.08);
+        }
+
+        .project-card {
+            border-top: 4px solid #00bde8;
+        }
+
+        .resume {
+            background: linear-gradient(135deg, #14213d, #2455a4);
+            color: white;
+            text-align: center;
+        }
+
+        .resume .section-title {
+            color: white;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 12px 0;
+            font-size: 17px;
+        }
+
+        .contact a {
+            color: #2455a4;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #14213d;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav {
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 45px 5%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                gap: 10px;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
+            .hero h1 {
+                font-size: 27px;
+            }
+
+            .section-title {
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>MyPortfolio</h2>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#hobbies">Hobbies</a>
+            <a href="#projects">Projects</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#resume">Resume</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <img
+                src="https://placehold.co/150x150/14213d/00d4ff?text=Profile"
+                alt="Profile Photo"
+                class="profile-image"
+            >
+
+            <h1>Hello, I'm <span>sandeep</span></h1>
+            <p>B.Tech Student | Computer Science Engineering</p>
+            <p>Welcome to my personal portfolio website!</p>
+
+            <a href="#about" class="button">Explore My Portfolio</a>
+            <a href="#contact" class="button">Contact Me</a>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h2 class="section-title">About Me</h2>
+
+        <p>
+            Hello! My name is Mohan Sai Charan. I am a Computer Science
+            Engineering student interested in programming, web development,
+            and new technologies. I enjoy learning new skills, solving
+            problems, and developing creative projects. My goal is to
+            become a skilled software developer and contribute to
+            innovative technology solutions.
+        </p>
+    </section>
+
+    <section class="education" id="education">
+        <h2 class="section-title">Educational Qualifications</h2>
+
+        <div class="card-container">
+            <div class="card">
+                <h3>B.Tech</h3>
+                <p>Branch: Computer Science Engineering</p>
+                <p>College: NRI College</p>
+                <p>Status: Currently Studying</p>
+            </div>
+
+            <div class="card">
+                <h3>Intermediate</h3>
+                <p>College: Your Junior College</p>
+                <p>Group: MPC</p>
+                <p>Year: Your Passing Year</p>
+            </div>
+
+            <div class="card">
+                <h3>SSC</h3>
+                <p>School: Your School Name</p>
+                <p>Percentage: Your Percentage</p>
+                <p>Year: Your Passing Year</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <h2 class="section-title">Technical Skills</h2>
+
+        <div class="skill-list">
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">Python</span>
+            <span class="skill">C Programming</span>
+            <span class="skill">Problem Solving</span>
+            <span class="skill">Web Development</span>
+            <span class="skill">Computer Fundamentals</span>
+        </div>
+    </section>
+
+    <section class="hobbies" id="hobbies">
+        <h2 class="section-title">My Hobbies</h2>
+
+        <div class="card-container">
+            <div class="card">
+                <h3> Reading</h3>
+                <p>Learning new things and exploring technology.</p>
+            </div>
+
+            <div class="card">
+                <h3> Coding</h3>
+                <p>Practicing programming and creating websites.</p>
+            </div>
+
+            <div class="card">
+                <h3> Music</h3>
+                <p>Listening to music during my free time.</p>
+            </div>
+
+            <div class="card">
+                <h3> Sports</h3>
+                <p>Playing games and participating in sports.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2 class="section-title">My Projects</h2>
+
+        <div class="card-container">
+            <div class="card project-card">
+                <h3>Personal Portfolio Website</h3>
+                <p>
+                    A personal website built using HTML and CSS to display
+                    my profile, skills, education, projects, and contact details.
+                </p>
+            </div>
+
+            <div class="card project-card">
+                <h3>College Bus Tracker</h3>
+                <p>
+                    A proposed application idea to help students track
+                    college buses and check their locations.
+                </p>
+            </div>
+
+            <div class="card project-card">
+                <h3>Student Information System</h3>
+                <p>
+                    A beginner project idea for organizing student details
+                    and academic information.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="achievements" id="achievements">
+        <h2 class="section-title">Achievements</h2>
+
+        <div class="card-container">
+            <div class="card">
+                <h3> Academic Learning</h3>
+                <p>Developing knowledge in Computer Science Engineering.</p>
+            </div>
+
+            <div class="card">
+                <h3> Project Development</h3>
+                <p>Practicing website development through personal projects.</p>
+            </div>
+
+            <div class="card">
+                <h3> Skill Development</h3>
+                <p>Continuously improving programming and technical skills.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="resume" id="resume">
+        <h2 class="section-title">My Resume</h2>
+
+        <p>
+            Interested in learning more about my education,
+            technical skills, and projects?
+        </p>
+
+        <br>
+
+        <a href="resume.pdf" class="button" download>
+            Download My Resume
+        </a>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="section-title">Contact Me</h2>
+
+        <p>
+             Email:
+            <a href="mailto:yourmail@example.com">yourmail@example.com</a>
+        </p>
+
+        <p>Phone: Your Phone Number</p>
+        <p>Location: Andhra Pradesh, India</p>
+
+        <p>
+             LinkedIn:
+            <a href="https://www.linkedin.com/" target="_blank"
+               rel="noopener noreferrer">
+                Visit My LinkedIn
+            </a>
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Mohan Sai Charan | Personal Portfolio Website</p>
+        <p>Designed using HTML and CSS only.</p>
+    </footer>
+
+</body>
+</html>
