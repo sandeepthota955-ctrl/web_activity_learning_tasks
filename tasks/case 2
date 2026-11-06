@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Community Service Project</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background-color: #f4f8f6;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(120deg, #00695c, #43a047);
+            color: white;
+            text-align: center;
+            padding: 35px;
+        }
+
+        header h1 {
+            font-size: 35px;
+        }
+
+        nav {
+            background-color: #004d40;
+            padding: 18px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 12px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url("https://images.unsplash.com/photo-1559027615-cd4628902d4a");
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 110px 20px;
+        }
+
+        .hero h2 {
+            font-size: 40px;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            padding: 30px 0;
+        }
+
+        h2 {
+            text-align: center;
+            color: #008577;
+            margin-bottom: 30px;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            width: 260px;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 3px 10px #ccc;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #008577;
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .timeline {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px #ccc;
+        }
+
+        .stage {
+            background: #e0f2f1;
+            border-left: 5px solid #008577;
+            padding: 15px;
+            margin: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        th {
+            background: #008577;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #e0f2f1;
+        }
+
+        .report {
+            background: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #ccc;
+        }
+
+        .outcomes {
+            background: #e0f2f1;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        footer {
+            background: #004d40;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 30px;
+        }
+
+        @media(max-width: 600px) {
+            .cards {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 7px;
+            }
+
+            .hero h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>COMMUNITY SERVICE PROJECT</h1>
+    <p>Serving Society | Building a Better Future</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#objectives">Objectives</a>
+    <a href="#beneficiaries">Beneficiaries</a>
+    <a href="#volunteers">Volunteers</a>
+    <a href="#timeline">Timeline</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#reports">Reports</a>
+    <a href="#outcomes">Outcomes</a>
+</nav>
+
+<section class="hero" id="home">
+    <h2>Small Actions, Big Changes!</h2>
+    <p>Let's Work Together for a Better Community</p>
+</section>
+
+<div class="container" id="objectives">
+
+    <h2>PROJECT OBJECTIVES</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Environmental Protection</h3>
+            <p>Plant trees and protect the environment.</p>
+        </div>
+
+        <div class="card">
+            <h3>Cleanliness</h3>
+            <p>Maintain clean streets and public places.</p>
+        </div>
+
+        <div class="card">
+            <h3>Education</h3>
+            <p>Provide educational support to children.</p>
+        </div>
+
+        <div class="card">
+            <h3>Social Awareness</h3>
+            <p>Spread awareness about health and hygiene.</p>
+        </div>
+
+    </div>
+</div>
+
+<div class="container" id="beneficiaries">
+
+    <h2>PROJECT BENEFICIARIES</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Local People</h3>
+            <p>People living in the surrounding community.</p>
+        </div>
+
+        <div class="card">
+            <h3>School Children</h3>
+            <p>Children receiving educational assistance.</p>
+        </div>
+
+        <div class="card">
+            <h3>Senior Citizens</h3>
+            <p>Older people receiving community support.</p>
+        </div>
+
+    </div>
+</div>
+
+<div class="container" id="volunteers">
+
+    <h2>VOLUNTEER DETAILS</h2>
+
+    <table>
+        <tr>
+            <th>S.No</th>
+            <th>Name</th>
+            <th>Role</th>
+            <th>Activity</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>Mohan Sai Charan</td>
+            <td>Team Leader</td>
+            <td>Project Management</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Krishna</td>
+            <td>Volunteer</td>
+            <td>Tree Plantation</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>Rahul</td>
+            <td>Volunteer</td>
+            <td>Cleanliness Drive</td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>Priya</td>
+            <td>Volunteer</td>
+            <td>Education Support</td>
+        </tr>
+    </table>
+
+</div>
+
+<div class="container" id="timeline">
+
+    <h2>PROJECT TIMELINE</h2>
+
+    <div class="timeline">
+
+        <div class="stage">
+            <h3>Week 1 - Planning</h3>
+            <p>Identify community problems and prepare the project plan.</p>
+        </div>
+
+        <div class="stage">
+            <h3>Week 2 - Awareness</h3>
+            <p>Conduct awareness programs for local people.</p>
+        </div>
+
+        <div class="stage">
+            <h3>Week 3 - Implementation</h3>
+            <p>Organize cleaning and tree plantation activities.</p>
+        </div>
+
+        <div class="stage">
+            <h3>Week 4 - Evaluation</h3>
+            <p>Collect feedback and evaluate project results.</p>
+        </div>
+
+    </div>
+</div>
+
+<div class="container" id="gallery">
+
+    <h2>PROJECT PHOTO GALLERY</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09" alt="Tree plantation">
+            <h3>Tree Plantation</h3>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15a" alt="Cleanliness drive">
+            <h3>Cleanliness Drive</h3>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b" alt="Education">
+            <h3>Education Support</h3>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a" alt="Community service">
+            <h3>Community Service</h3>
+        </div>
+
+    </div>
+</div>
+
+<div class="container" id="reports">
+
+    <h2>WEEKLY REPORTS</h2>
+
+    <div class="report">
+        <h3>Week 1 Report</h3>
+        <p>Volunteers identified community needs and planned activities.</p>
+    </div>
+
+    <div class="report">
+        <h3>Week 2 Report</h3>
+        <p>Awareness programs were conducted about cleanliness and health.</p>
+    </div>
+
+    <div class="report">
+        <h3>Week 3 Report</h3>
+        <p>Tree plantation and cleaning activities were organized.</p>
+    </div>
+
+    <div class="report">
+        <h3>Week 4 Report</h3>
+        <p>Project activities were evaluated and feedback was collected.</p>
+    </div>
+
+</div>
+
+<div class="container" id="outcomes">
+
+    <h2>PROJECT OUTCOMES</h2>
+
+    <div class="outcomes">
+
+        <h3>Environmental Awareness</h3>
+        <p>People understood the importance of protecting nature.</p>
+
+        <h3>Clean Environment</h3>
+        <p>Public places became cleaner through volunteer participation.</p>
+
+        <h3>Educational Support</h3>
+        <p>Children received learning support.</p>
+
+        <h3>Community Participation</h3>
+        <p>People worked together to improve society.</p>
+
+    </div>
+
+</div>
+
+<footer>
+    <h3>COMMUNITY SERVICE PROJECT</h3>
+    <p>Together We Can Make a Difference!</p>
+    <p>Designed by Mohan Sai Charan | CSE</p>
+    <p>Copyright 2026 All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
